@@ -1,0 +1,118 @@
+.page{
+  padding: 12px;
+  .title{
+    display: flex;
+    line-height: 16px;
+    margin-bottom :8px;
+    position: relative;
+    .textTitle{
+      flex:1;
+      text-align: center;
+    }
+  }
+  .parameters{
+    margin-top:16px;
+    .argument{
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      .absolute{
+        left:-12px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        box-shadow: 0px 0px 4px rgba(0,0,0,0.16);
+        height: 16px;
+        position: absolute;
+        display: none;
+        // background: white;
+        .delete{
+          width:16px;
+          height: 16px;
+        }
+      }
+      &:hover .absolute{
+        display: block;
+      }
+      .inputBloc{
+        width: auto;
+        .input{
+          width: 90%;
+        }
+      }
+      .paramValue{
+        width: 100%;
+        margin:0px;
+        .input{
+          width: 280px;
+        }
+      }
+    }
+  }
+  .inputBloc{
+    display: inline-flex;
+    margin: 8px;
+    input{
+      width: 114px;
+    }
+  }
+  .pageLine{
+    display: flex;
+    padding: 8px 8px;
+    margin: 0px -12px;
+    &.workflow{
+      .workflowName{
+        flex:1;
+        margin-left:8px;
+      }
+    }
+    &.history{
+        display: flex;
+        padding: 8px 8px;
+        margin: 0px -12px;
+        .date{
+          margin-left:8px;
+          margin-right:16px;
+        }
+        .workflowIdentity{
+          flex:1;
+          .workflowName{
+            margin-left: 8px;
+            display: inline-block;
+          }
+        }
+      }
+    .arrow{
+      display: none;
+      width: 16px;
+    }
+    &:hover{
+      background: rgba(0,0,0,.08);
+      cursor: pointer;
+      .arrow{
+        display: block;
+      }
+    }
+  }
+  .pageDetail{
+    .title{
+      .arrow{
+        position: absolute;
+        top:0;
+        bottom:0;
+        width: 16px;
+        margin:auto;
+      }
+    }
+    .content{
+      padding: 8px;
+    }
+    .btnBlock{
+      text-align: center;
+      .btn{
+        margin: 8px;
+      }
+    }
+  }
+
+}

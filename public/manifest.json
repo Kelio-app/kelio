@@ -1,0 +1,26 @@
+{
+  "name": "Kelio",
+  "version": "0.2",
+  "description": "CMD + K for your browser",
+  "manifest_version": 2,
+  "permissions": ["storage","activeTab"],
+  "icons" : {
+    "48": "img/logo_lite_256.png"
+  },
+  "browser_action": {
+      "default_popup": "index.html"
+  },
+  "web_accessible_resources" : ["/img/*"],
+  "background": {
+    "scripts": ["./background.js"],
+    "persistent": true
+  },
+  "content_security_policy": "script-src 'self' 'sha256-qZI2g+iW/uu8v4iWN85FTnT9SwFupUKA0D7MQaZ37eg='; object-src 'self'",
+  "content_scripts" : [
+    {
+      "matches": [ "<all_urls>" ],
+      "css": ["/static/css/app.css", "/static/css/content.css"],
+      "js": ["/static/js/content.js"]
+    }
+  ]
+}

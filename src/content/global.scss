@@ -1,0 +1,86 @@
+#blocKelio{
+  position: fixed;
+  z-index: 10000;
+  top:0;
+  bottom:0;
+  left:0;
+  right: 0;
+  background: rgba(220,220,220,0.8);
+  .relativeBloc{
+    position: relative;
+  }
+  .loader{
+    position: absolute;
+    top : 0;
+    bottom : 0;
+    right : 12px;
+  }
+}
+#kelio{
+  z-index: 10001;
+  background: #262126;
+  position: fixed;
+  margin: auto;
+  top:30%;
+  left:0;
+  right: 0;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.16), 0px 13px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  max-width: 700px;
+  font-size: 24px;
+  font-weight: 300;
+  color : #444;
+  .blocInputKelio{
+    padding: 0px 24px;
+    .inputKelio{
+      background: inherit;
+      flex:1;
+      border:none;
+      font-size: 24px;
+      outline : none;
+      padding: 16px 16px;
+      line-height: 28px;
+      color : #C5C5C5;
+    }
+  }
+  .shortcutContainer{
+    margin-top:18px;
+  }
+  #propositions {
+    .proposition{
+      padding: 16px 24px;
+      display: flex;
+      color : #747475;
+      &.selected{
+        color : #D5D1D6;
+        background: #2E2C2F;
+        .enter{
+          display: block;
+          width: 28px;
+          height: 28px;
+          svg{
+            fill : white;
+          }
+        }
+      }
+      .propositionTxt{
+        flex:1;
+      }
+      .emoji{
+        margin-right: 16px;
+        width: 24px;
+      }
+      .enter{
+        display: none;
+      }
+    }
+  }
+  .tooltip{
+    display: inline-block;
+    color:#747475;
+    margin: 0px 4px;
+  }
+  .tooltipSelected{
+    color: white;
+  }
+}
